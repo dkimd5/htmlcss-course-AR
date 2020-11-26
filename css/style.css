@@ -1,6 +1,16 @@
-* {
-  margin: 0;
-  padding: 0;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p,
+a, img, ol, ul, li,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, 
+menu, nav, output, ruby, section, summary,
+time {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
 }
 
 .page {
@@ -81,6 +91,11 @@
   margin: 0 0 0 97px;
 }
 
+.about-video {
+  margin: 0 0 0 97px;
+  object-fit: cover;
+}
+
 .dignity {
   padding: 50px;
   background-color: #f5f5f5;
@@ -143,19 +158,20 @@
   margin: 0 0 35px;
 }
 
-.screenshots-wrapper {
+.screenshots-list {
   display: flex;
   flex-wrap: wrap;
+  list-style-type: none;
 }
 
-.screenshots-wrapper-card {
+.screenshots-item {
   display: flex;
   width: 50%;
-  margin: 0 0 30px 0;
+  margin: 0 0 30px;
 }
 
-.screenshots-wrapper-card:nth-child(3),
-.screenshots-wrapper-card:nth-child(4) {
+.screenshots-item:nth-child(3),
+.screenshots-item:nth-child(4) {
   margin: 0;
 }
 
@@ -187,17 +203,22 @@
   margin: 0 0 35px;
 }
 
-.reviews-wrapper {
+.reviews-list {
   display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
 }
 
-.reviews-wrapper-left-column {
-  margin: 0 32px 0 0;
-}
 
-.reviews-card {
+.reviews-item {
   display: flex;
   margin: 0 0 24px;
+  width: 50%;
+}
+
+.reviews-item:nth-child(3),
+.reviews-item:nth-child(4) {
+  margin: 0;
 }
 
 .reviews-card:last-child {
@@ -213,6 +234,7 @@
   background-color: #ebebeb;
   border-radius: 5px;
   position: relative;
+  margin: 0 32px 0 0;
 }
 
 .reviews-usercomment:before {
@@ -261,6 +283,7 @@
   background-color: #445162;
   width: 300px;
   align-self: flex-end;
+  border-radius: 5px;
 }
 
 .price-card:first-child {
@@ -311,12 +334,167 @@
   border: none;
 }
 
+.price-button:hover {
+  background-color: lightgray;
+}
+
+.price-button:active {
+  background-color: #fff;
+}
+
 .price-button-text {
   color: #445161;
   font-size: 18px;
   font-weight: 400;
   line-height: 18px;
 }
+
+.footer-container {
+  background-color: #445162;
+  padding: 53px 0 49px;
+}
+
+.footer-header {
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  margin: 0 0 31px;
+}
+
+.footer-wrapper {
+  display: flex;
+}
+
+.footer-form {
+  margin: 0 0 0 249px;
+}
+
+input[type="text"],
+input[type="email"]{
+  width: 500px;
+  padding: 12px 0;
+  border: 0px;
+  margin: 0 0 21px;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none;
+  padding: 10px 0;
+  width: 500px;
+  border-radius: 5px;
+  margin: 0 0 15px;
+  line-height: normal;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: Arial;
+  color: #445162;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0 0 0 10px;
+}
+
+input[type="submit"]{
+  display: block;
+  width: 140px;
+  padding: 12px 0;
+  border-radius: 5px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  color: #445162;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+  background: lightgrey;
+}
+
+input[type="submit"]:active {
+  background: #fff;
+}
+
+.footer-contacts-list {
+  list-style-type: none;
+  margin: 8px 75px 0;
+}
+
+.footer-contacts-item {
+  position: relative;
+  margin: 0 0 29px;
+  color: #ffffff;
+  line-height: 16px;
+}
+
+.footer-contacts-item:before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 26px;
+  top: -6px;
+  left: -29px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+}
+
+.footer-contacts-item:first-child::before {
+  background-image: url(../img/skype_icon.png);
+}
+
+.footer-contacts-item:nth-child(2)::before {
+  width: 26px;
+  background-image: url(../img/icq_icon.png);
+}
+
+.footer-contacts-item:nth-child(3)::before {
+  background-image: url(../img/email_icon.png);
+}
+
+.footer-contacts-item:last-child::before {
+  background-image: url(../img/phone_icon.png);
+}
+
+.footer-contacts-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-contacts-link:hover {
+  color: lightskyblue;
+}
+
+.footer-contacts-link:active {
+  color: aquamarine;
+}
+
+.footer-socials-list {
+  list-style-type: none;
+  display: flex;
+  margin: 0 0 0 45px;
+}
+
+.footer-socials-item {
+  margin: 0 7px 0 0;
+}
+
+.footer-socials-image {
+  border-radius: 42px;
+}
+
+
+.footer-socials-image:hover {
+  background-color: lightskyblue;
+}
+
+.footer-socials-image:active {
+  background-color: aquamarine
+}
+
 
 @font-face {
   font-family: "ArialMT";
